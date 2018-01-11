@@ -11,8 +11,11 @@ const cors = require('cors')
 app.use(cors())
 app.disable('x-powered-by')
 
+const router = require('./routers/router.js')
+app.use('/api', router)
+
 app.use('/', (req, res, next) => {
-    res.json({message: 'hi'})
+    res.json({message: 'you hit the route root, check out the api'})
 })
 
 app.use((req, res, next) => {
