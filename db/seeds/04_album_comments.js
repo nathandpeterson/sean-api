@@ -11,5 +11,9 @@ exports.seed = function(knex, Promise) {
         {id: 4, album_id: 2, user: 'me', text: 'whatever'},
         {id: 5, album_id: 3, user: 'someone', text: 'i am finally happy'},
       ])
+    }).then(() => {
+      return knex.raw(
+        `SELECT setval('album_comments_id_seq', (SELECT MAX(id) FROM album_comments));`
+      )
     })
 }

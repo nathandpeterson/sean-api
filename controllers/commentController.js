@@ -1,18 +1,25 @@
 const CommentModel = require('../models/CommentModel')
 
 class CommentController {
-    static getAll(req, res, next) {
-        const response = CommentModel.getAll()
+    static async getAllForAlbum(req, res, next) {
+        const response = await CommentModel.getAllForAlbum(req.params.id)
         res.status(200).json(response)
     }
-    static getOne(req, res, next) {
-        const response = CommentModel.getOne(req.params.id, req.params.songId, req.params.commentId)
+    static async getAllForSong(req, res, next) {
+        const response = await CommentModel.getAllForSong(req.params.id, req.params.songId)
         res.status(200).json(response)
     }
-    static create(req, res, next) {
-        const response = CommentModel.create(req.params.id, req.params.songId, req.body.comment)
+    static async postForAlbum(req, res, next) {
+        const comment = {album_id: req.params.id, user: req.body.user, text: req.body.text}
+        const response = await CommentModel.postForAlbum(comment)
+        res.status(201).json(response)
+    }
+    static async postForSong(req, res, next) {
+        const comment = {song_id: req.params.songId, user: req.body.user, text: req.body.text}
+        const response = await CommentModel.postForSong(comment)
         res.status(201).json(response)
     }
 }
 
 module.exports = CommentController
+

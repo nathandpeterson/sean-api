@@ -6,10 +6,10 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('songs').insert([
         { id: 1, 
-          name: 'alphabet soup', 
-          artist: 'jonathan swift', 
+          name: 'hands', 
+          artist: 'sean', 
           imageURL: 'www.google.com',
-          link: 'www.googleAPI.com',
+          link: '1XYq_lVO5fZprcNNIfgaALDm-FnJke4u4',
           length: '3:07',
           description: 'an early effort'
         },

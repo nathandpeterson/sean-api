@@ -12,5 +12,9 @@ exports.seed = function(knex, Promise) {
         {id: 6, song_id: 5, user: 'doo-wap', text: 'the hour of love'},
         {id: 7, song_id: 5, user: 'doo-wap', text: 'another love hour'}
       ])
+    }).then(() => {
+      return knex.raw(
+        `SELECT setval('song_comments_id_seq', (SELECT MAX(id) FROM song_comments));`
+      )
     })
 }

@@ -1,13 +1,17 @@
+const db = require('../db/knex.js')
 
 class CommentModel {
-    static getAll(){
-        return {message: `I am in the getComment model`}
+    static getAllForAlbum(album_id){
+        return db('album_comments').where({album_id})
     }
-    static getOne(id, songId){
-        return {message: `I am in the getOneComment model, getting album ${id}, song ${songId}, comment: ${comment}`}
+    static getAllForSong(album_id, song_id){
+        return db('song_comments').where({song_id})
     }
-    static create(id, songId, comment) {
-        return {message: `I am in the getOneComment model, getting album ${id}, song ${songId}, comment: ${comment}`}
+    static postForAlbum(comment) {
+        return db('album_comments').insert(comment).returning('*')
+    }
+    static postForSong(comment) {
+        return db('song_comments').insert(comment).returning('*')
     }
 }
 

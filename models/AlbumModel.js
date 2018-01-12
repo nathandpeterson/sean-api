@@ -1,10 +1,11 @@
+const db = require('../db/knex.js')
 
 class AlbumModel {
     static getAll(){
-        return {message: `I am in the getAll model`}
+        return db('albums')
     }
     static getOne(id){
-        return {message: `I am in the getOne model, getting ID ${id}`}
+        return db('albums').where({id}).first()
     }
 }
 
