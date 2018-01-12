@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
+const expressGraphQL = require('express-graphql')
+
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 const morgan = require('morgan')
@@ -14,8 +16,15 @@ app.disable('x-powered-by')
 const router = require('./routers/router.js')
 app.use('/api', router)
 
+const schema = require('./schema/schema')
+app.use('/graphql', expressGraphQL({
+  schema,
+  graphiql: true
+}))
+
+
 app.use('/', (req, res, next) => {
-    res.json({message: 'you hit the route root, check out the api'})
+  res.json({message: 'you hit the route root, check out the api'})
 })
 
 app.use((req, res, next) => {

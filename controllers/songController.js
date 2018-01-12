@@ -1,7 +1,12 @@
 const SongModel = require('../models/SongModel')
 
 class SongController {
-    static async getAll(req, res, next) {
+    static async getAll(req, res, next){
+        const response = await SongModel.getAll()
+        res.status(200).json(response)
+    }
+
+    static async getByAlbum(req, res, next) {
         const response = await SongModel.getAll(req.params.id)
         res.status(200).json(response)
     }

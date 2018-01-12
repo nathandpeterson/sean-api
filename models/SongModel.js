@@ -1,7 +1,13 @@
 const db = require('../db/knex.js')
 
 class SongModel {
-    static getAll(id){
+    static getAll(){
+        return db('songs')
+    }
+    static getById(id){
+        return db('songs').where({id}).first()
+    }
+    static getByAlbum(id){
         const promises = [db('album_song').where({album_id: id}), db('songs')]
         return Promise.all(promises)
             .then(([ids, songs]) => {
@@ -13,7 +19,6 @@ class SongModel {
                 })
                 return albumSongs
             })
-        
     }
     static getOne(id, songId){
         // Grab song by id, regardless of whether it is on the album

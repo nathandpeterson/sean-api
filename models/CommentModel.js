@@ -1,6 +1,13 @@
 const db = require('../db/knex.js')
 
 class CommentModel {
+    static getAll(){
+        return db('song_comments')
+    }
+    static getById(id){
+        return db('song_comments').where({id}).first()
+    }
+
     static getAllForAlbum(album_id){
         return db('album_comments').where({album_id})
     }
