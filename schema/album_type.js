@@ -1,6 +1,8 @@
 const graphql = require('graphql')
-const { GraphQLObjectType, GraphQLID, GraphQLString } = require('graphql')
+const { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLList } = require('graphql')
 const AlbumModel = require('../models/AlbumModel')
+const SongModel = require('../models/SongModel')
+const SongType = require('./song_type')
 
 const AlbumType = new GraphQLObjectType({
     name: 'AlbumType',
@@ -9,7 +11,13 @@ const AlbumType = new GraphQLObjectType({
             name: { type: GraphQLString },
             artist: { type: GraphQLString },
             imageURL: { type: GraphQLString },
-            description: { type: GraphQLString }
+            description: { type: GraphQLString },
+            songs: {
+                type: new GraphQLList(SongType),
+                resolve(parentValue, args) {
+                    return SongModel.getByAlbum(parentValue.id)
+                }
+            },   
     })
 })
 
