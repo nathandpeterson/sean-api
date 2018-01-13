@@ -1,5 +1,5 @@
 const graphql = require('graphql')
-const { GraphQLObjectType, GraphQLID, GraphQLString } = require('graphql')
+const { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLNonNull } = require('graphql')
 const CommentModel = require('../models/CommentModel')
 const SongModel = require('../models/SongModel')
 const SongType = require('./song_type')
@@ -9,8 +9,7 @@ const CommentType = new GraphQLObjectType({
     fields: () => ({
             id: { type: GraphQLID },
             user: { type: GraphQLString },
-            text: { type: GraphQLString },
-            song_id: { type: GraphQLID}
+            text: { type: GraphQLString }
     })
 })
 
