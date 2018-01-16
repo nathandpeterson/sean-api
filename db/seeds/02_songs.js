@@ -54,7 +54,7 @@ exports.seed = function(knex, Promise) {
           description: 'graphql my heart'
         },
         { id: 7, 
-          name: 'breaking sad', 
+          name: 'local distortion', 
           artist: 'silas flannery', 
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
@@ -62,7 +62,7 @@ exports.seed = function(knex, Promise) {
           description: 'do-hickey do wah wah'
         },
         { id: 8, 
-          name: 'hands', 
+          name: 'giant bugs', 
           artist: 'ae oatley', 
           imageURL: 'www.google.com',
           link: '1XYq_lVO5fZprcNNIfgaALDm-FnJke4u4',
@@ -70,7 +70,7 @@ exports.seed = function(knex, Promise) {
           description: 'an early effort'
         },
         { id: 9, 
-          name: 'brexit my ass', 
+          name: 'gulliver', 
           artist: 'ae oatley', 
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
@@ -78,7 +78,7 @@ exports.seed = function(knex, Promise) {
           description: 'why not'
         },
         { id: 10, 
-          name: 'wizard romp', 
+          name: 'excel spreadsheets are ugly', 
           artist: 'ae oatley', 
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
@@ -94,7 +94,7 @@ exports.seed = function(knex, Promise) {
           description: 'please dont stop it'
         },
         { id: 12, 
-          name: 'golf has died', 
+          name: 'golf is not a sport', 
           artist: 'ae oatley', 
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',

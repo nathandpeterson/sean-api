@@ -1,6 +1,8 @@
 const graphql = require('graphql')
-const { GraphQLObjectType, GraphQLID, GraphQLString } = require('graphql')
+const { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLList } = require('graphql')
 const AlbumModel = require('../models/AlbumModel')
+const CommentType = require('./comment_type')
+const CommentModel = require('../models/CommentModel')
 
 const SongType = new GraphQLObjectType({
     name: 'SongType',
@@ -10,8 +12,13 @@ const SongType = new GraphQLObjectType({
             artist: { type: GraphQLString },
             imageURL: { type: GraphQLString },
             description: { type: GraphQLString },
-            length: { type : GraphQLString}
+            length: { type : GraphQLString},
+            comments: { 
+                type: new GraphQLList(CommentType),
+            resolve(parentValue) {
+                return CommentModel.getAllForAlbum(parentValue.id)
+            }}
     })
 })
 
-module.exports = SongType
+module.exports = SongType 

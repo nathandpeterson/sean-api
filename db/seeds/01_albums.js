@@ -13,7 +13,7 @@ exports.seed = function(knex, Promise) {
         },
         { id: 2, 
           name: 'cowboy hat sermons', 
-          artist: 'idiot love', 
+          artist: 'artist name', 
           imageURL: 'https://images.unsplash.com/photo-1499242165110-131f6ccd0c9a?auto=format&fit=crop&w=750&q=80',
           description: 'beats and heat'
         },
