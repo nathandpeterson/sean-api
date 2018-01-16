@@ -12,6 +12,7 @@ const SongType = new GraphQLObjectType({
             artist: { type: GraphQLString },
             imageURL: { type: GraphQLString },
             description: { type: GraphQLString },
+            audioURL : { type: GraphQLString },
             length: { type : GraphQLString},
             comments: { 
                 type: new GraphQLList(CommentType),

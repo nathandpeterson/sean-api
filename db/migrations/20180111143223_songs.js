@@ -8,6 +8,7 @@ exports.up = function(knex, Promise) {
         table.string('length').notNullable().defaultsTo('')
         table.string('imageURL').notNullable().defaultsTo('')
         table.string('description').notNullable().defaultsTo('')
+        table.string('audioURL').notNullable().defaultsTo('')
         table.timestamps(true, true)
       })
 }

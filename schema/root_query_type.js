@@ -33,7 +33,7 @@ const RootQuery = new GraphQLObjectType({
             type: SongType,
             args: { id: { type: new GraphQLNonNull(GraphQLID) }},
             resolve(parentValue, args){
-                return SongModel.getOne(args.id)
+                return SongModel.getById(args.id)
             }
         },
         comments: {

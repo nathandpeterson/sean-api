@@ -11,7 +11,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: '1XYq_lVO5fZprcNNIfgaALDm-FnJke4u4',
           length: '3:07',
-          description: 'an early effort'
+          description: 'an early effort',
+          audioURL: 'https://s3.us-east-2.amazonaws.com/sean-songs/test-songs/No_Answer.mp3'
         },
         { id: 2, 
           name: 'hands', 
@@ -19,7 +20,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '3:07',
-          description: 'why not'
+          description: 'why not',
+          audioURL: 'https://s3.us-east-2.amazonaws.com/sean-songs/test-songs/Hands.mp3'
         },
         { id: 3, 
           name: 'be careful', 
@@ -27,7 +29,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '3:15',
-          description: 'this is real'
+          description: 'this is real',
+          audioURL: 'https://s3.us-east-2.amazonaws.com/sean-songs/test-songs/Nothing_On_My_Mind.mp3'
         },
         { id: 4, 
           name: 'out of your head', 
@@ -35,7 +38,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '10:29',
-          description: 'please dont stop it'
+          description: 'please dont stop it',
+          audioURL: 'https://s3.us-east-2.amazonaws.com/sean-songs/test-songs/Out_of_Your_Head.mp3'
         },
         { id: 5, 
           name: "there's nothing wrong", 
@@ -43,7 +47,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '1:21',
-          description: 'shorty'
+          description: 'shorty',
+          audioURL: 'https://s3.us-east-2.amazonaws.com/sean-songs/test-songs/The_Pain.mp3'
         },
         { id: 6, 
           name: 'more data please', 
@@ -51,7 +56,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '1:21',
-          description: 'graphql my heart'
+          description: 'graphql my heart',
+          audioURL: ''
         },
         { id: 7, 
           name: 'local distortion', 
@@ -59,7 +65,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '4:01',
-          description: 'do-hickey do wah wah'
+          description: 'do-hickey do wah wah',
+          audioURL: ''
         },
         { id: 8, 
           name: 'giant bugs', 
@@ -67,7 +74,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: '1XYq_lVO5fZprcNNIfgaALDm-FnJke4u4',
           length: '3:07',
-          description: 'an early effort'
+          description: 'an early effort',
+          audioURL: ''
         },
         { id: 9, 
           name: 'gulliver', 
@@ -75,7 +83,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '3:07',
-          description: 'why not'
+          description: 'why not',
+          audioURL: ''
         },
         { id: 10, 
           name: 'excel spreadsheets are ugly', 
@@ -83,7 +92,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '3:15',
-          description: 'this is real'
+          description: 'this is real',
+          audioURL: ''
         },
         { id: 11, 
           name: 'clever soap hero', 
@@ -91,7 +101,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '10:29',
-          description: 'please dont stop it'
+          description: 'please dont stop it',
+          audioURL: ''
         },
         { id: 12, 
           name: 'golf is not a sport', 
@@ -99,7 +110,8 @@ exports.seed = function(knex, Promise) {
           imageURL: 'www.google.com',
           link: 'www.googleAPI.com',
           length: '1:21',
-          description: 'shorty'
+          description: 'shorty',
+          audioURL: ''
         },
       ])
     }).then(() => {
