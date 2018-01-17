@@ -15,7 +15,7 @@ class CommentModel {
         return db('song_comments').where({song_id})
     }
     static postForAlbum(comment) {
-        return db('album_comments').insert(comment).returning('*')
+        return db('album_comments').insert(comment)
     }
     static postForSong(data) {
         return db('song_comments').insert(data)

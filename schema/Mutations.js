@@ -14,9 +14,8 @@ const Mutations = new GraphQLObjectType({
                 song_id: { type: GraphQLID}
             },
             resolve(parentValue, args){
-                console.log('in MUTATIOn',parentValue, args)
                return CommentModel.postForSong(args)
-                    .then(result => console.log(result))
+                .then(res => args.song_id)
             }
         }
     }

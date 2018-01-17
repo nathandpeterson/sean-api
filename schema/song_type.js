@@ -17,7 +17,7 @@ const SongType = new GraphQLObjectType({
             comments: { 
                 type: new GraphQLList(CommentType),
             resolve(parentValue) {
-                return CommentModel.getAllForAlbum(parentValue.id)
+                return CommentModel.getAllForSong(null, parentValue.id)
             }}
     })
 })

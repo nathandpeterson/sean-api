@@ -46,7 +46,7 @@ const RootQuery = new GraphQLObjectType({
             type: CommentType,
             args: { id: { type: new GraphQLNonNull(GraphQLID) }},
             resolve(parentValue, args){
-                return CommentModel.getById(args.id)
+                return CommentModel.getAllForSong(null, args.id)
             }
         }
     })
