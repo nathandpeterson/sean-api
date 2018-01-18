@@ -4,9 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start": "node main.js",
     "dev": "nodemon main",
-    "knex": "knex",
-    "start": "node main"
+    "knex": "knex"
   },
   "author": "Nathan Peterson",
   "license": "ISC",
