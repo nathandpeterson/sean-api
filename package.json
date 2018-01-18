@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "dev": "nodemon main",
-    "knex": "knex"
+    "knex": "knex",
+    "start": "node main"
   },
   "author": "Nathan Peterson",
   "license": "ISC",
