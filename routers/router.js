@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
-const AlbumController = require('../controllers/AlbumController')
-const SongController = require('../controllers/SongController')
-const CommentController = require('../controllers/CommentController')
-const FetchSongs = require('../models/FetchSongs')
+const AlbumController = require('../controllers/AlbumController.js')
+const SongController = require('../controllers/SongController.js')
+const CommentController = require('../controllers/CommentController.js')
+const FetchSongs = require('../models/FetchSongs.js')
 
 router.get('/albums', AlbumController.getAll)
 router.get('/albums/:id', AlbumController.getOne)
