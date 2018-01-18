@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
         { id: 1, 
           name: 'owl and the rattlesnake', 
           artist: 'ae oatley', 
-          imageURL: 'https://images.unsplash.com/photo-1496239298983-ebf973a467dc?auto=format&fit=crop&w=1050&q=80',
+          imageURL: 'https://s3.us-east-2.amazonaws.com/sean-songs/images/guitar_acorn.jpeg',
           description: 'an early effort'
         },
         { id: 2, 

@@ -7,7 +7,6 @@ class CommentModel {
     static getById(id){
         return db.from('song_comments').where({id})
     }
-
     static getAllForAlbum(album_id){
         return db('album_comments').where({album_id})
     }

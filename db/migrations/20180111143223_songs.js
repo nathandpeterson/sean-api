@@ -4,7 +4,6 @@ exports.up = function(knex, Promise) {
         table.increments()
         table.string('name').notNullable().defaultsTo('')
         table.string('artist').notNullable().defaultsTo('')
-        table.string('link').notNullable().defaultsTo('')
         table.string('length').notNullable().defaultsTo('')
         table.string('imageURL').notNullable().defaultsTo('')
         table.string('description').notNullable().defaultsTo('')
