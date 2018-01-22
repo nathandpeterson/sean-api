@@ -23,7 +23,7 @@ app.use('/graphql', expressGraphQL({
 }))
 
 app.use('/', (req, res, next) => {
-  res.json({message: 'you hit the route root, check out the api'})
+  res.json({message: 'you hit the route root. Most content at /ap'})
 })
 
 app.use((req, res, next) => {
