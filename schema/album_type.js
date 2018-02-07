@@ -15,6 +15,7 @@ const AlbumType = new GraphQLObjectType({
             songs: {
                 type: new GraphQLList(SongType),
                 resolve(parentValue, args) {
+                    console.log('hit this',parentValue)
                     return SongModel.getByAlbum(parentValue.id)
                 }
             },   
